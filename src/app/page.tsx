@@ -1,7 +1,17 @@
 import Navbar from "@/components/Navbar"
 import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
 import Image from "next/image"
-import { FaFacebookF, FaTwitter, FaInstagram, FaGithub } from "react-icons/fa"
+import {
+	FaFacebookF,
+	FaTwitter,
+	FaInstagram,
+	FaGithub,
+	FaLocationArrow,
+	FaMobile,
+	FaMailBulk
+} from "react-icons/fa"
 
 export default function Home() {
 	const personalDetails = [
@@ -82,7 +92,10 @@ export default function Home() {
 			<Navbar />
 
 			{/*  LANDING PAGE */}
-			<section className="place-items-center grid pt-16 pb-10 h-screen">
+			<section
+				className="place-items-center grid pt-16 pb-10 h-screen"
+				id="home"
+			>
 				<div className="mx-52 text-center">
 					<h4 className="pb-8 font-medium text-2xl">
 						Hello There!
@@ -110,7 +123,7 @@ export default function Home() {
 
 			{/* ABOUT ME */}
 
-			<section className="bg-[#EAEDF2] min-h-screen">
+			<section className="bg-[#EAEDF2] min-h-screen" id="about">
 				<div className="mx-52 py-20">
 					{/* TITLE */}
 					<div className="mb-12 uppercase">
@@ -159,15 +172,15 @@ export default function Home() {
 								</h3>
 								<h6 className="flex gap-1 text-lg">
 									A
-									<span className="font-medium text-orange-600">
+									<span className="font-medium text-orange-500">
 										Web Developer
 									</span>
 									&
-									<span className="font-medium text-orange-600">
+									<span className="font-medium text-orange-500">
 										UI/UX
 									</span>
 									Designer Based in
-									<span className="font-medium text-orange-600">
+									<span className="font-medium text-orange-500">
 										Philippines.
 									</span>
 								</h6>
@@ -214,7 +227,7 @@ export default function Home() {
 										)
 									)}
 									<Button
-										className="mt-6 w-fit"
+										className="mt-6 w-fit hover:bg-orange-500"
 										size={"lg"}
 									>
 										DOWNLOAD CV
@@ -226,7 +239,10 @@ export default function Home() {
 				</div>
 			</section>
 			{/* SKILLS */}
-			<section className="place-items-center grid py-20 min-h-screen">
+			<section
+				className="place-items-center grid py-20 min-h-screen"
+				id="skills"
+			>
 				<div className="mx-52">
 					<div className="mb-12 uppercase">
 						<h4 className="font-semibold text-4xl">
@@ -253,7 +269,7 @@ export default function Home() {
 			</section>
 
 			{/* PROJECTS */}
-			<section className="py-20 min-h-screen">
+			<section className="py-20 min-h-screen" id="projects">
 				<div className="mx-52">
 					<div className="mb-12 uppercase">
 						<h4 className="font-semibold text-4xl">
@@ -287,10 +303,115 @@ export default function Home() {
 			</section>
 
 			{/* GET IN TOUCH */}
-			<section></section>
+			<section
+				className="py-20 min-h-screen bg-[#EAEDF2]"
+				id="contact"
+			>
+				<div className="mx-52">
+					<div className="mb-12 uppercase">
+						<h4 className="font-semibold text-4xl">
+							Get in touch
+						</h4>
+						<div className="bg-orange-600 my-2 rounded-full w-14 h-[1.5px]"></div>
+						<p className="text-gray-600">
+							A Web Developer & UI/UX Designer Based
+							in Philippines.
+						</p>
+					</div>
+
+					<div className="grid grid-cols-3 gap-6">
+						{/* FORM */}
+						<div className="bg-white shadow-md rounded-lg p-10 col-span-2">
+							<h5 className="mb-8 text-lg uppercase font-medium">
+								Say Something
+							</h5>
+							<form action="">
+								<div className="grid grid-cols-2 gap-4">
+									<Input placeholder="Name *" />
+									<Input placeholder="Email *" />
+									<Input
+										placeholder="Subject *"
+										className="col-span-2"
+									/>
+									<Textarea
+										placeholder="Your message *"
+										className="col-span-2"
+									/>
+								</div>
+								<div className="mt-8">
+									<Button
+										className="bg-orange-500 uppercase hover:bg-orange-600"
+										size={"lg"}
+									>
+										Send Message
+									</Button>
+								</div>
+							</form>
+						</div>
+						{/* Details */}
+						<div className="space-y-4">
+							{/* address */}
+							<div className="bg-white shadow-md rounded-lg p-10 flex items-center gap-6">
+								<FaLocationArrow className="text-5xl text-orange-500" />
+								<div>
+									<h6 className="font-medium">
+										My Address
+									</h6>
+									<p>
+										Puerto Princesa
+										City, Palawan
+										Philippines 5300
+									</p>
+								</div>
+							</div>
+							{/* phone */}
+							<div className="bg-white shadow-md rounded-lg p-10 flex items-center gap-6">
+								<FaMobile className="text-3xl text-orange-500" />
+								<div className="space-y-2">
+									<h6 className="font-medium">
+										Phone Number
+									</h6>
+									<p>(+63) 930-178-2255</p>
+								</div>
+							</div>
+							{/* Email */}
+							<div className="bg-white shadow-md rounded-lg p-10 flex items-center gap-6">
+								<FaMailBulk className="text-3xl text-orange-500" />
+								<div>
+									<h6 className="font-medium">
+										Email Address
+									</h6>
+									<p>
+										steven.evio@gmail.com
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
 			{/* FOOTER */}
-			<footer></footer>
+			<footer className="bg-slate-900 text-gray-500 py-4 ">
+				<div className="flex justify-between mx-52 items-center">
+					{/* Socials */}
+					<div className="flex justify-center gap-4 text-md">
+						<div className="place-items-center hover:border-orange-600 grid rounded-full w-fit hover:text-orange-600 cursor-pointer">
+							<FaFacebookF />
+						</div>
+						<div className="place-items-center hover:border-orange-600 grid rounded-full w-fit hover:text-orange-600 cursor-pointer">
+							<FaTwitter />
+						</div>
+						<div className="place-items-center hover:border-orange-600 grid rounded-full w-fit hover:text-orange-600 cursor-pointer">
+							<FaInstagram />
+						</div>
+						<div className="place-items-center hover:border-orange-600 grid rounded-full w-fit hover:text-orange-600 cursor-pointer">
+							<FaGithub />
+						</div>
+					</div>
+					<p>© 2024 copyright all right reserved</p>
+				</div>
+			</footer>
 		</main>
 	)
 }
