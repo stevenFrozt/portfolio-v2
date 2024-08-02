@@ -88,7 +88,7 @@ export default function Home() {
 	const imageNumbers = Array.from({ length: 24 }, (_, i) => i + 4)
 
 	return (
-		<main className="bg-white min-h-screen">
+		<main className="bg-white min-h-screen text-[rgb(31,31,31)]">
 			<Navbar />
 
 			{/*  LANDING PAGE */}
@@ -96,25 +96,25 @@ export default function Home() {
 				className="place-items-center grid pt-16 pb-10 h-screen"
 				id="home"
 			>
-				<div className="mx-52 text-center">
-					<h4 className="pb-8 font-medium text-2xl">
+				<div className=" lg:mx-52 text-center">
+					<h4 className=" pb-4 lg:pb-8 font-medium text-xl lg:text-2xl">
 						Hello There!
 					</h4>
-					<h1 className="font-semibold text-7xl">
+					<h1 className="font-semibold text-3xl lg:text-7xl">
 						I&apos;m Steven Kyle Evio
 					</h1>
 					{/* Socials */}
-					<div className="flex justify-center gap-4 pt-10 text-lg">
-						<div className="place-items-center hover:border-orange-600 grid p-4 border rounded-full w-fit hover:text-orange-600 cursor-pointer">
+					<div className="flex justify-center gap-4 pt-4 lg:pt-10 text-md">
+						<div className="place-items-center hover:border-orange-600 grid p-2 lg:p-4 border rounded-full w-fit hover:text-orange-600 cursor-pointer">
 							<FaFacebookF />
 						</div>
-						<div className="place-items-center hover:border-orange-600 grid p-4 border rounded-full w-fit hover:text-orange-600 cursor-pointer">
+						<div className="place-items-center hover:border-orange-600 grid p-2 lg:p-4 border rounded-full w-fit hover:text-orange-600 cursor-pointer">
 							<FaTwitter />
 						</div>
-						<div className="place-items-center hover:border-orange-600 grid p-4 border rounded-full w-fit hover:text-orange-600 cursor-pointer">
+						<div className="place-items-center hover:border-orange-600 grid p-2 lg:p-4 border rounded-full w-fit hover:text-orange-600 cursor-pointer">
 							<FaInstagram />
 						</div>
-						<div className="place-items-center hover:border-orange-600 grid p-4 border rounded-full w-fit hover:text-orange-600 cursor-pointer">
+						<div className="place-items-center hover:border-orange-600 grid p-2 lg:p-4 border rounded-full w-fit hover:text-orange-600 cursor-pointer">
 							<FaGithub />
 						</div>
 					</div>
@@ -124,7 +124,7 @@ export default function Home() {
 			{/* ABOUT ME */}
 
 			<section className="bg-[#EAEDF2] min-h-screen" id="about">
-				<div className="mx-52 py-20">
+				<div className="lg:mx-52 py-20 mx-8 lg:px-0">
 					{/* TITLE */}
 					<div className="mb-12 uppercase">
 						<h4 className="font-semibold text-4xl">
@@ -137,7 +137,7 @@ export default function Home() {
 						</p>
 					</div>
 					{/* CONTENT */}
-					<div className="flex gap-14">
+					<div className="flex flex-col lg:flex-row lg:items-center gap-14">
 						{/* IMAGE */}
 						<div className="relative">
 							<div className="top-8 left-3 absolute flex flex-col gap-4 bg-white px-1 py-2 rounded-md text-lg">
@@ -154,7 +154,7 @@ export default function Home() {
 									<FaGithub />
 								</div>
 							</div>
-							<div className="bg-white p-4 rounded-lg w-[24rem] overflow-hidden">
+							<div className="bg-white p-4 rounded-lg w-full lg:w-[24rem] overflow-hidden">
 								<Image
 									src={"/images/kyle.jpg"}
 									width={1500}
@@ -165,12 +165,12 @@ export default function Home() {
 							</div>
 						</div>
 						{/* DETAILS */}
-						<div className="p-4">
-							<div className="flex flex-col gap-4">
+						<div className="lg:p-4">
+							<div className="flex flex-col gap-5">
 								<h3 className="font-semibold text-4xl">
 									I&apos;m Steven Kyle Evio
 								</h3>
-								<h6 className="flex gap-1 text-lg">
+								{/* <h6 className="inline-block space-x-1 lg:flex lg:gap-1 text-lg">
 									A
 									<span className="font-medium text-orange-500">
 										Web Developer
@@ -183,7 +183,7 @@ export default function Home() {
 									<span className="font-medium text-orange-500">
 										Philippines.
 									</span>
-								</h6>
+								</h6> */}
 								<p className="text-gray-500 leading-0">
 									I&apos;m a passionate web
 									developer from Puerto
@@ -203,7 +203,7 @@ export default function Home() {
 									projects.
 								</p>
 								{/* PERSONAL DETAILS */}
-								<div className="gap-3 gap-x-10 grid grid-cols-2 mt-5">
+								<div className="gap-3 gap-x-10 grid grid-cols-1 lg:grid-cols-2 mt-5">
 									{personalDetails.map(
 										item => (
 											<div
@@ -243,7 +243,7 @@ export default function Home() {
 				className="place-items-center grid py-20 min-h-screen"
 				id="skills"
 			>
-				<div className="mx-52">
+				<div className="lg:mx-52 mx-8">
 					<div className="mb-12 uppercase">
 						<h4 className="font-semibold text-4xl">
 							Skills
@@ -270,10 +270,13 @@ export default function Home() {
 
 			{/* PROJECTS */}
 			<section className="py-20 min-h-screen" id="projects">
-				<div className="mx-52">
+				<div className="lg:mx-52 mx-8">
 					<div className="mb-12 uppercase">
 						<h4 className="font-semibold text-4xl">
 							Projects{" "}
+							<span className="text-sm text-gray-700 font-normal">
+								( 24 images )
+							</span>
 						</h4>
 						<div className="bg-orange-600 my-2 rounded-full w-14 h-[1.5px]"></div>
 						<p className="text-gray-600">
@@ -282,7 +285,7 @@ export default function Home() {
 						</p>
 					</div>
 					{/* SAMPLEs */}
-					<div className="gap-10 gap-y-20 grid grid-cols-2">
+					<div className="gap-10 gap-y-20 grid grid-cols-1 lg:grid-cols-2">
 						{imageNumbers.map(i => (
 							<div
 								key={i}
@@ -307,7 +310,7 @@ export default function Home() {
 				className="py-20 min-h-screen bg-[#EAEDF2]"
 				id="contact"
 			>
-				<div className="mx-52">
+				<div className="lg:mx-52 mx-8">
 					<div className="mb-12 uppercase">
 						<h4 className="font-semibold text-4xl">
 							Get in touch
@@ -319,23 +322,23 @@ export default function Home() {
 						</p>
 					</div>
 
-					<div className="grid grid-cols-3 gap-6">
+					<div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-6 gap-y-4 ">
 						{/* FORM */}
-						<div className="bg-white shadow-md rounded-lg p-10 col-span-2">
+						<div className="bg-white shadow-md rounded-lg p-5 lg:p-10 col-span-2">
 							<h5 className="mb-8 text-lg uppercase font-medium">
 								Say Something
 							</h5>
 							<form action="">
-								<div className="grid grid-cols-2 gap-4">
+								<div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
 									<Input placeholder="Name *" />
 									<Input placeholder="Email *" />
 									<Input
 										placeholder="Subject *"
-										className="col-span-2"
+										className="lg:col-span-2"
 									/>
 									<Textarea
 										placeholder="Your message *"
-										className="col-span-2"
+										className="lg:col-span-2"
 									/>
 								</div>
 								<div className="mt-8">
@@ -349,9 +352,9 @@ export default function Home() {
 							</form>
 						</div>
 						{/* Details */}
-						<div className="space-y-4">
+						<div className="space-y-4 ">
 							{/* address */}
-							<div className="bg-white shadow-md rounded-lg p-10 flex items-center gap-6">
+							<div className="bg-white shadow-md rounded-lg p-10 flex items-center gap-6 ">
 								<FaLocationArrow className="text-5xl text-orange-500" />
 								<div>
 									<h6 className="font-medium">
@@ -392,8 +395,8 @@ export default function Home() {
 			</section>
 
 			{/* FOOTER */}
-			<footer className="bg-slate-900 text-gray-500 py-4 ">
-				<div className="flex justify-between mx-52 items-center">
+			<footer className="bg-black text-gray-400 py-4 ">
+				<div className="flex flex-col lg:flex-row gap-4 justify-between lg:mx-52 items-center mx-8">
 					{/* Socials */}
 					<div className="flex justify-center gap-4 text-md">
 						<div className="place-items-center hover:border-orange-600 grid rounded-full w-fit hover:text-orange-600 cursor-pointer">

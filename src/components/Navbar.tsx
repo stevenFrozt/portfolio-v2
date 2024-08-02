@@ -2,7 +2,7 @@ import React from "react"
 
 export default function Navbar() {
 	return (
-		<div className="top-0 z-50 fixed bg-white py-4 w-full">
+		<div className="top-0 z-50 fixed bg-white py-4 w-full hidden lg:block">
 			<div className="flex justify-between items-center mx-52">
 				<h5 className="font-bold text-2xl">STEVEN</h5>
 				<div className="flex gap-10 font-medium text-sm uppercase">
