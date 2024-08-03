@@ -276,7 +276,7 @@ export default function Home() {
 						</h1>
 					</div>
 					{/* Socials */}
-					<div className="flex justify-center gap-4 pt-4 lg:pt-10 text-md overflow-hidden">
+					<div className="flex justify-center gap-4 pt-4 lg:pt-10 text-xl lg:text-md overflow-hidden">
 						<a
 							target="_blank"
 							href={
@@ -700,7 +700,7 @@ export default function Home() {
 			</section>
 
 			{/* FOOTER */}
-			<footer className="bg-black py-4 text-gray-400">
+			<footer className="bg-black lg:py-4 pt-4 pb-28 text-gray-400">
 				<div className="flex lg:flex-row flex-col justify-between items-center gap-4 mx-8 lg:mx-52">
 					{/* Socials */}
 					<div className="flex justify-center gap-4 text-md">
