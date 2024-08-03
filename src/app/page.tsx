@@ -454,13 +454,13 @@ export default function Home() {
 											</div>
 										)
 									)}
-									<div className="flex items-center gap-5">
+									<div className="flex lg:flex-row flex-col lg:items-center lg:gap-5 w-full">
 										<a
 											href="/CV.pdf"
 											download="CV - Steven Kyle Evio"
 										>
 											<Button
-												className="hover:bg-orange-500 mt-6 w-fit uppercase"
+												className="hover:bg-orange-500 mt-6 lg:w-fit uppercase"
 												size={
 													"lg"
 												}
@@ -474,7 +474,7 @@ export default function Home() {
 											download="Portfolio - Steven kyle Evio"
 										>
 											<Button
-												className="hover:bg-orange-500 mt-6 w-fit uppercase"
+												className="hover:bg-orange-500 mt-4 lg:mt-6 lg:w-fit uppercase"
 												size={
 													"lg"
 												}
