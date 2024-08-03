@@ -261,7 +261,7 @@ export default function Home() {
 
 			{/*  LANDING PAGE */}
 			<section
-				className="place-items-center grid pt-16 pb-10 h-screen"
+				className="place-items-center grid pt-16 pb-10 h-[100svh]"
 				id="home"
 			>
 				<div className="lg:mx-52 text-center">
