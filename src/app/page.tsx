@@ -584,9 +584,9 @@ export default function Home() {
 						{projects.map((i, index) => (
 							<div
 								key={i.imageUrl}
-								className="bg-white shadow-lg p-1"
+								className="bg-white shadow-lg p-1 rounded-lg"
 							>
-								<div className="relative h-[36rem]">
+								<div className="relative h-[24rem] lg:h-[36rem]">
 									<Image
 										src={i.imageUrl}
 										alt=""
@@ -595,7 +595,7 @@ export default function Home() {
 									/>
 								</div>
 								<div className="p-8">
-									<h5 className="mt-4 mb-2 font-medium text-2xl">
+									<h5 className="lg:mt-4 mb-2 font-medium text-2xl">
 										{index + 1}
 										{".   "}
 										{i.title}
